@@ -5,20 +5,24 @@ I extracted two datasets (37K observations and 22 features in total) about adver
 
 The codes include cleaning, validating and exploratory analysis about advertising spending and performance.
 
-Section 1:
---Get the descriptive statistics of the top 10 categories with highest average display ad impressions(the number of times the advertisement are exposed to consumers).
---Explore more about the insurance category and get the statistics about the top 5 insurance companies with the highest impressions.
+_Section 1:_
 
-Section 2:
---Use unique visitors as the criteria to see which insurance companies perform best in getting volumn to their websites.
---Create a new variable 'value', reflecting the number of unique visitors a company can attract for 1 unit of money spent. 
-  Fomular:
-  value = unique_visitor/(display_spend + social_display_spend)
---Use this variable to analyze which companies have the lowest cost of getting new potential customers.
+ - Get the descriptive statistics of the top 10 categories with highest average display ad impressions(the number of times the advertisement are exposed to consumers).
+ - Explore more about the insurance category and get the statistics about the top 5 insurance companies with the highest impressions.
 
-Section 3:
---Generate and compare the statistics about display_spend and impressions for Amazon in 2018 and 2019.
+_Section 2:_
 
-Section 4:
---Figure out under all the department and business category of Google, which department (such as Google Inc., Google Worldwide, Google Chrome, Google Play) get the most exposure of its ads by using the ad impression variable. 
---Compare the statistics in 2018 and 2019
+ - Use unique visitors as the criteria to see which insurance companies perform best in getting volumn to their websites.
+ - Create a new variable 'value', reflecting the number of unique visitors a company can attract for 1 unit of money spent. 
+  > Fomular:
+  > value = unique_visitor/(display_spend + social_display_spend)
+ - Use this variable to analyze which companies have the lowest cost of getting new potential customers.
+
+_Section 3:_
+
+ - Generate and compare the statistics about display_spend and impressions for Amazon in 2018 and 2019.
+
+_Section 4:_
+
+ - Figure out under all the department and business category of Google, which department (such as Google Inc., Google Worldwide, Google Chrome, Google Play) get the most exposure of its ads by using the ad impression variable. 
+ - Compare the statistics in 2018 and 2019
