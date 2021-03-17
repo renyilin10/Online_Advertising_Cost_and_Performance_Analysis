@@ -1,11 +1,24 @@
-# Sample-CFA-and-EFA-RCode
-I wrote this sample code for a client to help them evaluate the validity of their survey measurements. 
+# Online_Advertising_Cost_and_Performance_Analysis
+This project was from 2019.
 
-My client have three different scales measuring the influence of tinnitus on patients.
-The first one is the THI scale which have 25 questions in total. Among these 25 questions, 12 measure the functional influence, 8 measure the emotional influence, and 5 measure the catastrophic influences. These (Functional, Emotional, Catastrpphic) are called latent variables in CFA terms but I just call them 'subscales' in the comments of my R code.
+I extracted two datasets (37K observations and 22 features in total) about advertising spending and performance for companies from all industries (e.g., retail, Multi-Category advertisers, insurance, Computers & Technology) in 2018 and 2019 from a licensed source (Comscore).
 
-The second one is the TFI scale that also have 25 questions in total, but 8 subscales (I: intrusive, Sc:sense of control, C: cognitive, Sl: sleep, A: auditory, R: relaxation, Q: quality of life, E: emotional)
+The codes include cleaning, validating and exploratory analysis about advertising spending and performance.
 
-The third one is the TPFQ scale with four subsales (Concentration, Emotion, Hearing, Sleep) and 20 questions in total.
+Section 1:
+--Get the descriptive statistics of the top 10 categories with highest average display ad impressions(the number of times the advertisement are exposed to consumers).
+--Explore more about the insurance category and get the statistics about the top 5 insurance companies with the highest impressions.
 
-Before running CFA and EFA, I actually evaluate the framing of each questions in terms of face validity, which help to guide the direction of factor analysis.
+Section 2:
+--Use unique visitors as the criteria to see which insurance companies perform best in getting volumn to their websites.
+--Create a new variable 'value', reflecting the number of unique visitors a company can attract for 1 unit of money spent. 
+  Fomular:
+  value = unique_visitor/(display_spend + social_display_spend)
+--Use this variable to analyze which companies have the lowest cost of getting new potential customers.
+
+Section 3:
+--Generate and compare the statistics about display_spend and impressions for Amazon in 2018 and 2019.
+
+Section 4:
+--Figure out under all the department and business category of Google, which department (such as Google Inc., Google Worldwide, Google Chrome, Google Play) get the most exposure of its ads by using the ad impression variable. 
+--Compare the statistics in 2018 and 2019

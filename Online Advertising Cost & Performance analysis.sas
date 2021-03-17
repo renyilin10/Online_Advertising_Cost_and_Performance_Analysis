@@ -126,21 +126,7 @@ title;
 /*********************************************************/
 
 /********************************ANALYSIS: SECTION 1***********************************/
-title "Analysis of Display_Ad_Impressions in the category of insurance";
-proc means data=Ad2018_cleaned mean median max min;
- title3 "2018";
- var Impressions;
- where Category = "Insurance";
-run;
 
-proc means data=Ad2019_cleaned mean median max min;
- title3 "2019";
- var Impressions;
- where Category = "Insurance";
-run;
-title;
-
-/*********************************************************/
 title "Analysis of Display_Ad_Impressions for all categories in 2018";
 proc means data=Ad2018_cleaned mean median max min;
  class category;
@@ -171,8 +157,25 @@ proc print data=cat2019 (obs=10);
 run;
 title;
 
+/*********************************************************/
+
+title "Analysis of Display_Ad_Impressions in the category of insurance";
+proc means data=Ad2018_cleaned mean median max min;
+ title3 "2018";
+ var Impressions;
+ where Category = "Insurance";
+run;
+
+proc means data=Ad2019_cleaned mean median max min;
+ title3 "2019";
+ var Impressions;
+ where Category = "Insurance";
+run;
+title;
+
+
 /********************************ANALYSIS: SECTION 2***********************************/
-title "Analysis for insurance field 2019";
+title "Analysis for insurance field 2019 using unique visitor and value";
 data insurance2019;
 	set Ad2019_cleaned;
 	IF Category ^= 'Insurance' then delete;
@@ -200,7 +203,7 @@ proc print data = insurance2019(obs = 5);
 run;
 title;
 
-title "Analysis for insurance field 2018";
+title "Analysis for insurance field 2018 using unique visitor and value";
 data insurance2018;
 	set Ad2018_cleaned;
 	IF Category ^= 'Insurance' then delete;
